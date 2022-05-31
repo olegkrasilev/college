@@ -1,0 +1,27 @@
+.thick-3 {
+  background: linear-gradient(#fff 0 0) 0% calc(-3px - 100%) / var(--d, 0%) 200%
+    no-repeat;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+
+.telegram,
+.instagram,
+.youtube {
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (any-hover: hover) {
+  .thick-3:hover {
+    --d: 100%;
+    background-position: 50% 0%;
+    color: #000 !important;
+    transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+  }
+
+  .telegram:hover,
+  .instagram:hover,
+  .youtube:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+  }
+}
